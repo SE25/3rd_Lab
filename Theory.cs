@@ -13,14 +13,14 @@ namespace _3rd_Lab
         static void Main(string[] args)
         {
 
-            Level1();
-            Level2();
-            Level3();
-            BinarySearch();
+            //Level1();
+            //Level2();
+            //Level3();
+            //BinarySearch();
             MixingArrays1();
-            MixingArrays2();
-            Inverting();
-            LoopShifting();
+            //MixingArrays2();
+            //Inverting();
+            //LoopShifting();
 
 
         }
@@ -789,7 +789,7 @@ namespace _3rd_Lab
         static void MixingArrays1()
         {
             List<int> listA = new List<int>() { 11, 12, 23, 55, 65, 82, 90 };
-            List<int> listB = new List<int>() { 13, 15, 6, 4, 5 };
+            List<int> listB = new List<int>() { 13, 15, 6, 4, 5 ,100, 92, 13, 41, 5};
             List<int> listC = new List<int>();
             int lengthOfListA = listA.Count;
             int lengthOfListB = listB.Count;
@@ -803,7 +803,11 @@ namespace _3rd_Lab
             }
             for (int i = 0; i < differenceOfLengths; i++)
             {
-                listC.Add(listA[biggestLength - differenceOfLengths + i]);
+                if (lengthOfListA > lengthOfListB)
+                {
+                    listC.Add(listA[biggestLength - differenceOfLengths + i]);
+                }
+                else listC.Add(listB[biggestLength - differenceOfLengths + i]);
             }
             
             Console.Write("--- Algorithms || n.12 ---  ");
